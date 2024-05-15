@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_ft">
+
+    <fragment
+        android:id="@+id/login_ft"
+        android:name="com.create.fragments.Login_ft"
+        android:label="Login"
+        tools:layout="@layout/fragment_login_ft"
+        >
+        <action
+            android:id="@+id/action_login_ft_to_signup_ft"
+            app:destination="@id/signup_ft"
+            app:popUpTo="@id/splash_ft"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_ft_to_password_ft"
+            app:destination="@id/password_ft" />
+        <action
+            android:id="@+id/action_login_ft_to_home_ft"
+            app:destination="@id/home_ft"
+            app:popUpTo="@id/login_ft"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup_ft"
+        android:name="com.create.fragments.signup_ft"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup_ft" >
+        <action
+            android:id="@+id/action_signup_ft_self"
+            app:destination="@id/signup_ft"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_signup_ft_to_login_ft"
+            app:destination="@id/login_ft"
+            app:popUpTo="@id/login_ft" />
+        <action
+            android:id="@+id/action_signup_ft_to_home_ft"
+            app:destination="@id/home_ft"
+            app:popUpTo="@id/login_ft"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/password_ft"
+        android:name="com.create.fragments.password_ft"
+        android:label="Password"
+        tools:layout="@layout/fragment_password_ft" >
+        <action
+            android:id="@+id/action_password_ft_to_login_ft"
+            app:destination="@id/login_ft" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_ft"
+        android:name="com.create.fragments.home_ft"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_ft" >
+        <action
+            android:id="@+id/action_home_ft_to_edit_ft"
+            app:destination="@id/edit_ft"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/home_ft" />
+        <action
+            android:id="@+id/action_home_ft_to_splash_ft"
+            app:destination="@id/splash_ft"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_home_ft_to_message"
+            app:destination="@id/message" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/edit_ft"
+        android:name="com.create.fragments.Edit_ft"
+        android:label="fragment_edit_ft"
+        tools:layout="@layout/fragment_edit_ft" >
+        <action
+            android:id="@+id/action_edit_ft_to_home_ft"
+            app:destination="@id/home_ft"
+            app:popUpTo="@id/home_ft"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash_ft"
+        android:name="com.create.fragments.Splash_ft"
+        android:label="fragment_splash_ft"
+        tools:layout="@layout/fragment_splash_ft" >
+        <action
+            android:id="@+id/action_splash_ft_to_home_ft"
+            app:destination="@id/home_ft"
+            app:popUpTo="@id/splash_ft"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_ft_to_login_ft"
+            app:destination="@id/login_ft"
+            app:popUpTo="@id/splash_ft"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_ft_to_home_ft2"
+            app:destination="@id/home_ft"
+            app:popUpTo="@id/splash_ft"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/message"
+        android:name="com.create.fragments.Message"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_message_to_home_ft"
+            app:destination="@id/home_ft" />
+    </fragment>
+
+</navigation>
