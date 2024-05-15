@@ -61,7 +61,7 @@ class home_ft : Fragment() {
 
         binding.addBtn.setOnClickListener {
 
-            findNavController().navigate(R.id.action_home_ft_to_message)
+            findNavController().navigate(R.id.action_home_ft_to_edit_ft)
         }
 
         val token = tokenManager.getEmail()
