@@ -58,10 +58,11 @@
             android:layout_height="match_parent"
             android:textColorHint="@color/light_grey"
             android:hint="Start note here...."
-            android:textSize="15dp"
+            android:textSize="17sp"
             android:fontFamily="@font/lato_medium"
-            android:lineHeight="2dp"
-            android:layout_margin="18dp"
+            android:lineSpacingExtra="15dp"
+            android:layout_margin="20dp"
+            android:textColor="@color/grey"
             android:background="@drawable/edit_txt_dg"/>
 
 
